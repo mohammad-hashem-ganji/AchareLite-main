@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace App.Domain.Core.Product.AppServices
 {
-    public interface IProductAppService
-    {
-        public List<productDTO> GetProducts();
-    }
+    //public interface IProductAppService
+    //{
+    //    public List<productDTO> GetProducts();
+    //}
 }

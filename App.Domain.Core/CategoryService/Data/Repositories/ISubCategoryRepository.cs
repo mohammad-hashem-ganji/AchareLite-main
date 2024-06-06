@@ -10,7 +10,7 @@ namespace App.Domain.Core.CategoryService.Data.Repositories
 {
     public interface ISubCategoryRepository
     {
-        void Creat(string name);
+        void Creat(string name, int MaincategoryId);
         void Delete(int id);
         List<SubCategory> GetAll();
         SubCategory Edit(int id);

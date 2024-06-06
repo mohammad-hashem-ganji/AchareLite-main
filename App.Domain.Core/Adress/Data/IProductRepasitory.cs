@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace App.Domain.Core.Product.Data
 {
-    public interface IProductRepasitory
-    {
-        public List<productDTO> GetProducts();
-    }
+    //public interface IProductRepasitory
+    //{
+    //    public List<productDTO> GetProducts();
+    //}
 }

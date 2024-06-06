@@ -22,7 +22,7 @@ namespace App.Infra.DataAccess.Repo.Ef
         }
 
 
-        public void Creat(string name)
+        public void Creat(string name, int mainCategoryId)
         {
             _dbContext.Add(new SubCategory { Title = name });
             _dbContext.SaveChanges();
@@ -56,6 +56,7 @@ namespace App.Infra.DataAccess.Repo.Ef
         {
             SubCategory subCategory = _dbContext.SubCategories.FirstOrDefault(c => c.Id == sub.Id);
             subCategory.Title = sub.Title;
+            subCategory.MainCategoryId = sub.MainCategoryId;
             _dbContext.Update(subCategory);
             _dbContext.SaveChanges();
         }

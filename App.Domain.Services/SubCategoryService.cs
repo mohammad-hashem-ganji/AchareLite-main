@@ -19,9 +19,9 @@ namespace App.Domain.Services
             _subCategoryRepository = subCategoryRepository;
         }
 
-        public void Creat(string name)
+        public void Creat(string name, int mainCategoryId)
         {
-            _subCategoryRepository.Creat(name);
+            _subCategoryRepository.Creat(name,mainCategoryId);
         }
 
         public void Delete(int id)
@@ -45,6 +45,7 @@ namespace App.Domain.Services
         {
             _subCategoryRepository.Update(sub);
         }
+
 
 
     }

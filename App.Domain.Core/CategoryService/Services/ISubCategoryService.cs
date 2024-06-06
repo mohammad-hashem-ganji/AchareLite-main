@@ -10,7 +10,7 @@ namespace App.Domain.Core.CategoryService.Services
 {
     public interface ISubCategoryService
     {
-        void Creat(string name);
+        void Creat(string name,int mainCategoryId);
         void Delete(int id);
         List<SubCategory> GetAll();
         SubCategory Edit(int id);

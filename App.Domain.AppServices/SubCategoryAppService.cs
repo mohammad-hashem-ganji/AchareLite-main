@@ -20,9 +20,9 @@ namespace App.Domain.AppServices
             _subCategoryService = subCategoryService;
         }
 
-        public void Creat(string name)
+        public void Creat(string name, int mainCategoryId)
         {
-            _subCategoryService.Creat(name);
+            _subCategoryService.Creat(name,mainCategoryId);
         }
 
         public void Delete(int id)

@@ -10,5 +10,6 @@ namespace App.Domain.Core.CategoryService.DTOs
     {
         public int Id { get; set; }
         public string Title { get; set; }
+        public int MainCategoryId { get; set; }
     }
 }

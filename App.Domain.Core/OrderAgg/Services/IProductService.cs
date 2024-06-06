@@ -2,8 +2,8 @@
 
 namespace App.Domain.Core.Product.Services
 {
-    public interface IProductService
-    {
-        public List<productDTO> GetProducts();
-    }
+    //public interface IProductService
+    //{
+    //    public List<productDTO> GetProducts();
+    //}
 }
