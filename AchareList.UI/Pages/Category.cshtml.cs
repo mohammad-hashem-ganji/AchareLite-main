@@ -29,13 +29,13 @@ namespace AchareList.UI.Pages
 
         public IActionResult OnGetDelete(int id)
         {
-            _categoryRepository.Delete(id);
+           
             return RedirectToAction("Index");
         }
 
         public IActionResult OnPost()
         {
-            _categoryRepository.Create(CategoryName);
+            
             return RedirectToAction("Index");
         }
     }
