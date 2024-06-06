@@ -1,6 +1,10 @@
+using App.Domain.AppServices;
+using App.Domain.Core.CategoryService.AppServices;
 using App.Domain.Core.CategoryService.Data.Repositories;
+using App.Domain.Core.CategoryService.Services;
+using App.Domain.Services;
 using App.Infra.DataAccess.Repo.Ef;
-using App.Infra.DB.SqlServer.EF.DB_Achare;
+using App.Infra.DB.SqlServer.EF.DB_Achare.Ef;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +13,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ISubCategoryRepository, SubCategoryRepository>();
+builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
+builder.Services.AddScoped<ISubCategoryAppService, SubCategoryAppService>();
 
 builder.Services.AddDbContext<AchareDbContext>(options
     => options.UseSqlServer(

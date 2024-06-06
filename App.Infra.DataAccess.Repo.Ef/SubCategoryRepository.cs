@@ -3,6 +3,7 @@ using App.Domain.Core.CategoryService.Data.Repositories;
 using App.Domain.Core.CategoryService.DTOs;
 using App.Domain.Core.CategoryService.Entities;
 using App.Infra.DB.SqlServer.EF.DB_Achare;
+using App.Infra.DB.SqlServer.EF.DB_Achare.Ef;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,9 +52,9 @@ namespace App.Infra.DataAccess.Repo.Ef
             return SubCategoryEntity;
         }
 
-        public void Update(int id, SubCategoryDto sub)
+        public void Update(SubCategoryDto sub)
         {
-            SubCategory subCategory = _dbContext.SubCategories.FirstOrDefault(c => c.Id == id);
+            SubCategory subCategory = _dbContext.SubCategories.FirstOrDefault(c => c.Id == sub.Id);
             subCategory.Title = sub.Title;
             _dbContext.Update(subCategory);
             _dbContext.SaveChanges();

@@ -15,6 +15,7 @@ namespace App.Domain.AppServices
         private readonly SubCategoryService _subCategoryService;
 
         SubCategoryAppService(SubCategoryService subCategoryService)
+
         {
             _subCategoryService = subCategoryService;
         }
@@ -41,9 +42,9 @@ namespace App.Domain.AppServices
             return subCategories;
         }
 
-        public void Update(int id, SubCategoryDto sub)
+        public void Update(SubCategoryDto sub)
         {
-            _subCategoryService.Update(id, sub);
+            _subCategoryService.Update(sub);
         }
     }
 }

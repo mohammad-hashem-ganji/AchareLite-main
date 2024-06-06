@@ -14,6 +14,6 @@ namespace App.Domain.Core.CategoryService.Services
         void Delete(int id);
         List<SubCategory> GetAll();
         SubCategory Edit(int id);
-        void Update(int id, SubCategoryDto sub);
+        void Update(SubCategoryDto sub);
     }
 }

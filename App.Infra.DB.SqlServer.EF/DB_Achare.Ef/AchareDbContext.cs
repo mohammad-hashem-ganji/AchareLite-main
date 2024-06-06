@@ -1,16 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
-using App.Domain.Core.Adress.Entities;
+﻿using App.Domain.Core.Adress.Entities;
+using App.Domain.Core.CategoryService.Entities;
 using App.Domain.Core.Member.Entities;
 using App.Domain.Core.OrderAgg.Entities;
-using App.Domain.Core.CategoryService.Entities;
 using App.Infra.DB.SqlServer.EF.EntitiesConfigoration;
-using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace App.Infra.DB.SqlServer.EF.DB_Achare
+namespace App.Infra.DB.SqlServer.EF.DB_Achare.Ef
 {
-
     public class AchareDbContext : DbContext
     {
         public AchareDbContext(DbContextOptions<AchareDbContext> options) : base(options)

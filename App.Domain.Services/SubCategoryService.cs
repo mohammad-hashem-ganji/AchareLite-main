@@ -41,9 +41,11 @@ namespace App.Domain.Services
             return entities;
         }
 
-        public void Update(int id, SubCategoryDto sub)
+        public void Update(SubCategoryDto sub)
         {
-            _subCategoryRepository.Update(id, sub);
+            _subCategoryRepository.Update(sub);
         }
+
+
     }
 }
