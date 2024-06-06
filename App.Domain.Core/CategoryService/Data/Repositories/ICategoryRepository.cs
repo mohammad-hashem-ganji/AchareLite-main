@@ -1,4 +1,5 @@
-﻿using App.Domain.Core.CategoryService.Entities;
+﻿using App.Domain.Core.CategoryService.DTOs;
+using App.Domain.Core.CategoryService.Entities;
 
 namespace App.Domain.Core.CategoryService.Data.Repositories
 {
@@ -7,5 +8,7 @@ namespace App.Domain.Core.CategoryService.Data.Repositories
         void Create(string name);
         List<MainCategory> GetAll();
         void Delete(int id);
+        MainCategory Edit(int id);
+        void Update(MainCategory sub);
     }
 }

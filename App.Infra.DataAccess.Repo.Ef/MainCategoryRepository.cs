@@ -1,14 +1,16 @@
 ﻿using App.Domain.Core.CategoryService.Data.Repositories;
+using App.Domain.Core.CategoryService.DTOs;
 using App.Domain.Core.CategoryService.Entities;
 using App.Infra.DB.SqlServer.EF.DB_Achare;
+using App.Infra.DB.SqlServer.EF.DB_Achare.Ef;
 
 namespace App.Infra.DataAccess.Repo.Ef
 {
-    public class CategoryRepository : ICategoryRepository
+    public class MainCategoryRepository : ICategoryRepository
     {
         private readonly AchareDbContext _dbContext;
 
-        public CategoryRepository(AchareDbContext dbContext)
+        public MainCategoryRepository(AchareDbContext dbContext)
         {
             _dbContext = dbContext;
         }
@@ -35,10 +37,26 @@ namespace App.Infra.DataAccess.Repo.Ef
 
         }
 
+        public MainCategory Edit(int id)
+        {
+            var mainCategoryEntity = _dbContext.MainCategories.FirstOrDefault(m => m.Id == id);
+            return mainCategoryEntity;
+        }
+
         public List<MainCategory> GetAll()
         {
             var categories = _dbContext.MainCategories.ToList();
             return categories;
+        }
+
+
+
+        public void Update(MainCategory main)
+        {
+            MainCategory mainCategory = _dbContext.MainCategories.FirstOrDefault(m => m.Id == main.Id);
+            mainCategory.Title = main.Title;
+            _dbContext.Update(mainCategory);
+            _dbContext.SaveChanges();
         }
     }
 }
