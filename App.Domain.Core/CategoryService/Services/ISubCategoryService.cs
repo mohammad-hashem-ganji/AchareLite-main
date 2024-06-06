@@ -6,16 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace App.Domain.Core.CategoryService.Data.Repositories
+namespace App.Domain.Core.CategoryService.Services
 {
-    public interface ISubCategoryRepository
+    public interface ISubCategoryService
     {
         void Creat(string name);
         void Delete(int id);
         List<SubCategory> GetAll();
         SubCategory Edit(int id);
         void Update(int id, SubCategoryDto sub);
-
     }
 }
- 

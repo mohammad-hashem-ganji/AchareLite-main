@@ -1,5 +1,6 @@
 ﻿
 using App.Domain.Core.CategoryService.Data.Repositories;
+using App.Domain.Core.CategoryService.DTOs;
 using App.Domain.Core.CategoryService.Entities;
 using App.Infra.DB.SqlServer.EF.DB_Achare;
 using System;
@@ -50,10 +51,10 @@ namespace App.Infra.DataAccess.Repo.Ef
             return SubCategoryEntity;
         }
 
-        public void Update(int id, string name)
+        public void Update(int id, SubCategoryDto sub)
         {
             SubCategory subCategory = _dbContext.SubCategories.FirstOrDefault(c => c.Id == id);
-            subCategory.Title = name;
+            subCategory.Title = sub.Title;
             _dbContext.Update(subCategory);
             _dbContext.SaveChanges();
         }
