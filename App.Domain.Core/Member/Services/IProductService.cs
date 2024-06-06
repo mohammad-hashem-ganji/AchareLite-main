@@ -4,6 +4,6 @@ namespace App.Domain.Core.Product.Services
 {
     public interface IProductService
     {
-        public List<ProductDTO> GetProducts();
+        public List<productDTO> GetProducts();
     }
 }

@@ -36,19 +36,28 @@ namespace App.Infra.DataAccess.Repo.Ef
             }
         }
 
+
         public List<SubCategory> GetAll()
         {
             var subCategories = _dbContext.SubCategories.ToList();
             return subCategories;
         }
 
-        public void Update(int id)
-        {
-            var entity = _dbContext.SubCategories.FirstOrDefault(s => s.Id == id);
-            if (entity != null)
-            {
 
-            }
+        public SubCategory Edit(int id)
+        {
+            var SubCategoryEntity = _dbContext.SubCategories.FirstOrDefault(s => s.Id == id);
+            return SubCategoryEntity;
         }
+
+        public void Update(int id, string name)
+        {
+            SubCategory subCategory = _dbContext.SubCategories.FirstOrDefault(c => c.Id == id);
+            subCategory.Title = name;
+            _dbContext.Update(subCategory);
+            _dbContext.SaveChanges();
+        }
+
+
     }
 }

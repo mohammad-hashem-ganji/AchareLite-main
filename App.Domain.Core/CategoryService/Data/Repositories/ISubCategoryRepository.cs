@@ -12,8 +12,8 @@ namespace App.Domain.Core.CategoryService.Data.Repositories
         void Creat(string name);
         void Delete(int id);
         List<SubCategory> GetAll();
-        void Update(int id
-            );
+        SubCategory Edit(int id);
+        void Update(int id, string name);
 
     }
 }

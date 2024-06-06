@@ -9,6 +9,6 @@ namespace App.Domain.Core.Product.Data
 {
     public interface IProductRepasitory
     {
-        public List<ProductDTO> GetProducts();
+        public List<productDTO> GetProducts();
     }
 }

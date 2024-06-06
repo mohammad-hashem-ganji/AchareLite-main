@@ -10,6 +10,6 @@ namespace App.Domain.Core.Product.AppServices
 {
     public interface IProductAppService
     {
-        public List<ProductDTO> GetProducts();
+        public List<productDTO> GetProducts();
     }
 }
