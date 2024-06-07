@@ -1,4 +1,5 @@
 ﻿using App.Domain.AppServices;
+using App.Domain.Core.CategoryService.AppServices;
 using App.Domain.Core.CategoryService.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,9 +7,9 @@ namespace AchareLite.UI2.Controllers
 {
     public class SubCategory : Controller
     {
-        private readonly SubCategoryAppService _subCategoryAppService;
+        private readonly ISubCategoryAppService _subCategoryAppService;
 
-        SubCategory(SubCategoryAppService subCategoryAppService)
+        SubCategory(ISubCategoryAppService subCategoryAppService)
         {
             _subCategoryAppService = subCategoryAppService;
         }

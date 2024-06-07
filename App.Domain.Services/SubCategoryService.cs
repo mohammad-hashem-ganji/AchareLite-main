@@ -1,4 +1,5 @@
-﻿using App.Domain.Core.CategoryService.DTOs;
+﻿using App.Domain.Core.CategoryService.Data.Repositories;
+using App.Domain.Core.CategoryService.DTOs;
 using App.Domain.Core.CategoryService.Entities;
 using App.Domain.Core.CategoryService.Services;
 using App.Infra.DataAccess.Repo.Ef;
@@ -12,9 +13,9 @@ namespace App.Domain.Services
 {
     public class SubCategoryService : ISubCategoryService
     {
-        private readonly SubCategoryRepository _subCategoryRepository;
+        private readonly ISubCategoryRepository _subCategoryRepository;
 
-        SubCategoryService(SubCategoryRepository subCategoryRepository)
+        SubCategoryService(ISubCategoryRepository subCategoryRepository)
         {
             _subCategoryRepository = subCategoryRepository;
         }

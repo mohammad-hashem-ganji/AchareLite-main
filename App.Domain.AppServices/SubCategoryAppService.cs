@@ -1,6 +1,7 @@
 ﻿using App.Domain.Core.CategoryService.AppServices;
 using App.Domain.Core.CategoryService.DTOs;
 using App.Domain.Core.CategoryService.Entities;
+using App.Domain.Core.CategoryService.Services;
 using App.Domain.Services;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,9 @@ namespace App.Domain.AppServices
 {
     public class SubCategoryAppService : ISubCategoryAppService
     {
-        private readonly SubCategoryService _subCategoryService;
+        private readonly ISubCategoryService _subCategoryService;
 
-        SubCategoryAppService(SubCategoryService subCategoryService)
+        SubCategoryAppService(ISubCategoryService subCategoryService)
 
         {
             _subCategoryService = subCategoryService;

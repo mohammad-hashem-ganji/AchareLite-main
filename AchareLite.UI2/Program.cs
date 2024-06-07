@@ -16,9 +16,9 @@ builder.Services.AddScoped<ISubCategoryRepository, SubCategoryRepository>();
 builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
 builder.Services.AddScoped<ISubCategoryAppService, SubCategoryAppService>();
 
-//builder.Services.AddDbContext<AchareDbContext>(options
-//    => options.UseSqlServer(
-//        "Data Source =.; Initial Catalog = AchareCodefirst; Integrated Security = True; TrustServerCertificate = True"));
+builder.Services.AddDbContext<AchareDbContext>(options
+    => options.UseSqlServer(
+        "Data Source =.; Initial Catalog = AchareCodefirst; Integrated Security = True; TrustServerCertificate = True"));
 
 var app = builder.Build();
 

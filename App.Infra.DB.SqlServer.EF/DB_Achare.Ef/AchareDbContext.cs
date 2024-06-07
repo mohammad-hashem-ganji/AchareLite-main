@@ -21,15 +21,15 @@ namespace App.Infra.DB.SqlServer.EF.DB_Achare.Ef
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfiguration(new CommentConfiguration());
-            //modelBuilder.ApplyConfiguration(new BidConfiguration());
-            //modelBuilder.ApplyConfiguration(new CityConfigorarion());
-            //modelBuilder.ApplyConfiguration(new MainCategoryConfiguration());
-            //modelBuilder.ApplyConfiguration(new ServiceConfiguration());
-            //modelBuilder.ApplyConfiguration(new SubCategoryConfiguration());
-            //modelBuilder.ApplyConfiguration(new ExpertConfiguration());
-            //modelBuilder.ApplyConfiguration(new CustomerConfiguration());
-            //modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            modelBuilder.ApplyConfiguration(new CommentConfiguration());
+            modelBuilder.ApplyConfiguration(new BidConfiguration());
+            modelBuilder.ApplyConfiguration(new CityConfigorarion());
+            modelBuilder.ApplyConfiguration(new MainCategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ServiceConfiguration());
+            modelBuilder.ApplyConfiguration(new SubCategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ExpertConfiguration());
+            modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
