@@ -21,21 +21,21 @@ namespace App.Infra.DB.SqlServer.EF.DB_Achare.Ef
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new CommentConfiguration());
-            modelBuilder.ApplyConfiguration(new BidConfiguration());
-            modelBuilder.ApplyConfiguration(new CityConfigorarion());
-            modelBuilder.ApplyConfiguration(new MainCategoryConfiguration());
-            modelBuilder.ApplyConfiguration(new ServiceConfiguration());
-            modelBuilder.ApplyConfiguration(new SubCategoryConfiguration());
-            modelBuilder.ApplyConfiguration(new ExpertConfiguration());
-            modelBuilder.ApplyConfiguration(new CustomerConfiguration());
-            modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            //modelBuilder.ApplyConfiguration(new CommentConfiguration());
+            //modelBuilder.ApplyConfiguration(new BidConfiguration());
+            //modelBuilder.ApplyConfiguration(new CityConfigorarion());
+            //modelBuilder.ApplyConfiguration(new MainCategoryConfiguration());
+            //modelBuilder.ApplyConfiguration(new ServiceConfiguration());
+            //modelBuilder.ApplyConfiguration(new SubCategoryConfiguration());
+            //modelBuilder.ApplyConfiguration(new ExpertConfiguration());
+            //modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+            //modelBuilder.ApplyConfiguration(new OrderConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }
 
-        public Expert Experts { get; set; }
-        public Customer Customers { get; set; }
+        public DbSet<Expert> Experts { get; set; }
+        public DbSet<Customer> Customers { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Comment> Comments { get; set; }
